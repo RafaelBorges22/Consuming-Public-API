@@ -1,0 +1,15 @@
+{
+    "name": "api/public",
+    "autoload": {
+        "psr-4": {
+            "Api\\Public\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RafaelBorges22",
+            "email": "rafaelmascarenhasborges@gmail.com"
+        }
+    ],
+    "require": {}
+}
