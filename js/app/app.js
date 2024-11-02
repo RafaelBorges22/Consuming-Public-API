@@ -1,5 +1,4 @@
-import Pokemon from "./pokemon.js";
-
+import Pokemon from './pokemon.js'
 const app = Vue.createApp({
     components: {
         Pokemon
