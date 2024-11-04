@@ -12,7 +12,9 @@ const app = Vue.createApp({
     template:`
         <Consuming />
 
-        <Pokemon >
+        <Pokemon />
+
+        <ViaCep/>
     `, 
 });
 

@@ -4,6 +4,7 @@ export default {
         <br><input v-model="pokemonName" @blur="pesquisaPokemon(pokemonName)" placeholder="Digite o nome do Pokémon" />
         <br><input v-model="altura" placeholder="Altura" readonly />
         <br><input v-model="peso" placeholder="Peso" readonly />
+        <br><input v-model="pesagem" placeholder="Resultado" readonly>
       </div>
     `,
   
@@ -20,6 +21,7 @@ export default {
         this.nome = "";
         this.altura = "";
         this.peso = "";
+        this.pesagem = "";
       },
       async pesquisaPokemon(valor) {
         const nomePokemon = valor.toLowerCase().trim();
@@ -34,7 +36,6 @@ export default {
             this.nome = conteudo.name.charAt(0).toUpperCase() + conteudo.name.slice(1);
             this.altura = conteudo.height;
             this.peso = conteudo.weight;
-            this.tipo = conteudo.types.map(t => t.type.name).join(', ');
           } catch (error) {
             this.limpaFormularioPokemon();
             alert("Pokémon não encontrado. Tente novamente.");

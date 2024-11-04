@@ -48,8 +48,8 @@ export default {
               "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              cep: this.cep,
-              pokemon: this.pokemon
+              peso: this.peso,
+              altura: this.altura
             })
           });
   
