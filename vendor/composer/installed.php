@@ -3,7 +3,7 @@
         'name' => 'usuario/consuming-public-api',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '34f335be83272d6558949a3039c385e0e17d1817',
+        'reference' => '6c0756215fb506c2c6f08fbbcc1170ba2628f4d1',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'usuario/consuming-public-api' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '34f335be83272d6558949a3039c385e0e17d1817',
+            'reference' => '6c0756215fb506c2c6f08fbbcc1170ba2628f4d1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
