@@ -4,9 +4,10 @@ export default {
       <br><input v-model="pokemonName" @blur="pesquisaPokemon(pokemonName)" placeholder="Digite o nome do Pokémon" />
       <br><input v-model="altura" placeholder="Altura" />
       <br><input v-model="peso" placeholder="Peso" />
+      <br><input v-model="classificarIMC()" placeholder="Classficação" />
       <img :src="pokemon.sprites.front_default" alt="Image" width="150" />
-      <br><button @click="getPesoTag">Result</button>
-      <br><p v-if="pesoTag">Classificação de Peso: {{ pesoTag }}</p>      
+      <br><button @click="pesagem(), classificarIMC()">Result</button>
+      <br><p v-if="pesoTag">Classificação de Peso: {{ peso_Tag }}</p>      
     </div>
   `,
 
@@ -64,7 +65,7 @@ export default {
           headers: {
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ peso: this.peso, altura: this.altura })
+          body: JSON.stringify({ peso: this.weight, altura: this.height })
       });
       
         console.log("Resposta", response);
@@ -72,7 +73,7 @@ export default {
         if (response.ok) {
           const data = await response.json();
           if (data.peso_tag) {
-            this.pesoTag = data.peso_tag; 
+            this.pesoTag = alert.peso_tag; 
           } else if (data.error) {
             console.error("Erro:", data.error);
             this.pesoTag = ''; 
@@ -89,19 +90,15 @@ export default {
       const imc = peso / (altura * altura); 
       return {
           imc: parseFloat(imc.toFixed(2)), 
-          classificacao: classificarIMC(imc) 
-      };
+        };
     },
     async classificarIMC(imc) {
-      if (imc < 18.5) {
-          return "Abaixo do peso";
-      } else if (imc >= 18.5 && imc < 24.9) {
-          return "Peso normal";
-      } else if (imc >= 25 && imc < 29.9) {
-          return "Sobrepeso";
-      } else {
-          return "Obesidade";
-      }
+      if (imc < 20) {
+          alert ("Leve");
+      } else if (imc >= 20 && imc < 50) {
+          alert ("Peso Médio");
+      } else (imc > 50) 
+          alert("Pesado");
   }
   },
 };

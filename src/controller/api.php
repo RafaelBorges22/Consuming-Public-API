@@ -6,7 +6,7 @@ header("Content-Type: application/json");
 $data = json_decode(file_get_contents("php://input"), true);
 
 function pesagem($peso, $altura) {
-    $imc = $peso / $altura;
+    $imc = $peso / pow($altura, 2);
     if ($imc < 50) {
         return "Leve";
     } elseif ($imc >= 50 && $imc <= 200) {
