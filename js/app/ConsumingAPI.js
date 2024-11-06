@@ -4,19 +4,25 @@ export default {
       <br><input v-model="pokemonName" @blur="pesquisaPokemon(pokemonName)" placeholder="Digite o nome do Pokémon" />
       <br><input v-model="altura" placeholder="Altura" />
       <br><input v-model="peso" placeholder="Peso" />
-      <button @click="getPesoTag">Result</button>
+      <img :src="pokemon.sprites.front_default" alt="Image" width="150" />
+      <br><button @click="getPesoTag">Result</button>
       <br><p v-if="pesoTag">Classificação de Peso: {{ pesoTag }}</p>      
     </div>
   `,
 
   data() {
-    return {
-      pokemonName: '',
-      nome: '',
-      altura: '',
-      peso: '',
-      pesoTag: '' 
-    };
+      return {
+        pokemon: {
+          sprites: {
+            front_default: ''
+          }
+        },
+        pokemonName: '',
+        altura: '',
+        peso: '',
+        pesoTag: ''
+    }
+    
   },
   
   methods: {
@@ -40,6 +46,8 @@ export default {
           this.nome = conteudo.name.charAt(0).toUpperCase() + conteudo.name.slice(1);
           this.altura = conteudo.height;
           this.peso = conteudo.weight;
+          this.pokemon = conteudo;
+          console.log(this.pokemon.sprites.front_default);
         } catch (error) {
           this.limpaFormularioPokemon();
           alert("Pokémon não encontrado. Tente novamente.");
@@ -49,7 +57,7 @@ export default {
       }
     },
 
-    /*async getPesoTag() { 
+    async getPesoTag() { 
       try {
         const response = await fetch('src/controller/api.php', {
           method: 'POST',
@@ -75,7 +83,7 @@ export default {
       } catch (error) {
         console.error("Erro na solicitação:", error);
       }
-    },*/
+    },
 
     async pesagem(altura,peso) {
       const imc = peso / (altura * altura); 
