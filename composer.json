@@ -1,0 +1,15 @@
+{
+    "name": "usuario/consuming-public-api",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\ConsumingPublicApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RafaelBorges22",
+            "email": "rafaelmascarenhasborges@gmail.com"
+        }
+    ],
+    "require": {}
+}
