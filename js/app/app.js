@@ -14,6 +14,7 @@ const app = Vue.createApp({
 
         <Pokemon />
 
+        <ViaCep/>
     `, 
 });
 
