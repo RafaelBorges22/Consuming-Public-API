@@ -1,99 +1,115 @@
+/* Cor de fundo para o corpo da página */
+body {
+  background: #121212; /* Fundo escuro para toda a página */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
 div {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f2f9ff; 
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  max-width: 350px;
-  margin: 30px auto;
+  background: linear-gradient(135deg, #1e1e2f, #2c2c3e);
+  padding: 40px; /* Aumentei o padding para mais espaçamento interno */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  max-width: 600px; /* Aumentei a largura máxima */
+  width: 90%; /* Responsividade para telas menores */
+  margin: 20px auto;
   position: relative;
+  color: #f0f0f0; /* Texto claro para contraste */
 }
 
-
 input {
-  padding: 12px;
-  margin: 12px 0;
-  border: 2px solid #1e90ff; 
+  padding: 14px; /* Ajuste para combinar com o tamanho maior da div */
+  margin: 14px 0;
+  border: 2px solid #6a5acd;
   border-radius: 8px;
-  background-color: white;
-  color: #1e90ff;
-  font-size: 16px;
-  width: 80%;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+  background: #2a2a3b;
+  color: #cfcfff;
+  font-size: 18px;
+  width: 95%; /* Para preencher melhor o espaço */
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 input::placeholder {
-  color: #1e90ff; /* azul escuro */
-  opacity: 0.7;
+  color: #8888aa;
+  opacity: 0.8;
 }
 
 input:focus {
-  border-color: #ff4500; 
-  box-shadow: 0 0 5px rgba(255, 69, 0, 0.4);
+  border-color: #ff6347;
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.7);
   outline: none;
+  transform: scale(1.02);
 }
-
 
 img {
-  margin-top: 15px;
-  border: 3px solid #1e90ff;
+  margin-top: 25px;
+  border: 4px solid #6a5acd;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 180px; /* Aumentei o tamanho */
+  height: 180px;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
 }
 
-
 button {
-  background-color: #ff4500; 
-  color: white;
-  padding: 12px 25px;
+  background-color: #ff6347;
+  color: #fff;
+  padding: 14px 30px; /* Botão maior */
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px; /* Aumentei o tamanho da fonte */
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
-  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 20px rgba(255, 99, 71, 0.4);
+  margin-top: 20px;
 }
 
 button:hover {
-  background-color: #e63b00; 
-  transform: translateY(-2px);
+  background-color: #e5543d;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 25px rgba(255, 99, 71, 0.5);
 }
 
 button:active {
   transform: translateY(1px);
+  box-shadow: 0 3px 15px rgba(255, 99, 71, 0.3);
 }
-
 
 p {
-  color: #1e90ff; 
+  color: #cfcfff;
   font-weight: bold;
-  margin-top: 20px;
-  font-size: 18px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  border-top: 2px solid #1e90ff;
-  border-bottom: 2px solid #1e90ff;
+  font-size: 20px; /* Aumentei o tamanho do texto */
+  margin-top: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 16px; /* Mais espaçamento interno */
+  border: 2px solid #6a5acd;
+  border-radius: 10px;
   display: inline-block;
+  background: rgba(42, 42, 59, 0.9);
 }
 
-p:before, p:after {
+p:before,
+p:after {
   content: '';
   display: block;
-  width: 50px;
+  width: 70px;
   height: 2px;
-  background: #1e90ff;
-  margin: 5px auto;
+  background: #6a5acd;
+  margin: 10px auto;
 }
+
