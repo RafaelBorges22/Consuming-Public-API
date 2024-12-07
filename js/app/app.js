@@ -13,8 +13,6 @@ const app = Vue.createApp({
         <Consuming />
 
         <Pokemon />
-
-        <ViaCep/>
     `, 
 });
 

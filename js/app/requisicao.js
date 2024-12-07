@@ -1,33 +1,7 @@
 export default {
     template: `
       <div>
-        <input v-model="cep" placeholder="Digite o CEP" />
-        <input v-model="pokemon" placeholder="Digite o nome do Pokémon" />
-        <button @click="fetchData">Buscar</button>
-  
-        <div v-if="successMessage" class="success-message">
-          {{ successMessage }}
-        </div>
-        
-        <div v-if="cepData">
-          <h3>Informações do CEP</h3>
-          <p><strong>Rua:</strong> {{ cepData.logradouro }}</p>
-          <p><strong>Bairro:</strong> {{ cepData.bairro }}</p>
-          <p><strong>Cidade:</strong> {{ cepData.localidade }}</p>
-          <p><strong>Estado:</strong> {{ cepData.uf }}</p>
-        </div>
-  
-        <div v-if="pokemonData">
-          <h3>Informações do Pokémon</h3>
-          <p><strong>Nome:</strong> {{ pokemonData.name }}</p>
-          <p><strong>Altura:</strong> {{ pokemonData.height }}</p>
-          <p><strong>Peso:</strong> {{ pokemonData.weight }}</p>
-          <p><strong>Classificação do Peso:</strong> {{ pokemonData.peso_classificacao }}</p>
-          <p><strong>Descrição:</strong> {{ pokemonData.peso_tag }}</p>
-          <p v-if="pokemonData.peso_classificacao === 'Pesado'" class="warning">
-            Atenção: Esse Pokémon não pode ser cadastrado acima do peso!
-          </p>
-        </div>
+       
       </div>
     `,
     data() {
